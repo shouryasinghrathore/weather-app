@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3f71afcb;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #f9f7f7c9;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    overflow-x: hidden;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+
+}
+
+.weather {
+    text-transform: uppercase;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tab-container {
+
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: .875rem;
+    letter-spacing: 1.75px;
+    text-transform: capitalize;
+}
+
+
+.tab.current-Tab {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(196, 196, 240);
+}
+
+.form-conatianer.active {
+    scale: 1;
+    opacity: 1;
+}
+
+/* .weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+.weather-container{
+    
+    margin-block: 4rem;
+}
+
+.btn {
+    all: unset;
+    border-radius: 5px;
+    font-size: .85rem;
+    cursor: pointer;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    background-color: var(--colorDark2);
+}
+
+.grant-location-container {
+    display: none;
+
+}
+
+.grant-location-container.active {
+    align-items: center;
+    text-transform: uppercase;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.grant-location-container p:first-of-type {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container p:last-of-type {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: .75px;
+
+}
+
+.grant-location-container img {
+    align-items: center;
+    margin-bottom: 2rem;
+    display: flex;
+
+
+}
+
+.loading-container {
+    display: none;
+}
+
+
+.loading-container.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loading-container p {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.user-info-container {
+    display: none;
+}
+
+.user-info-container.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.name {
+    display: flex;
+    gap: 0 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.name p {
+    font-size: 2rem;
+
+}
+
+.user-info-container img {
+    width: 90px;
+    height: 90px;
+}
+
+.name img {
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.user-info-container p[data-temp] {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+
+
+.parameter-container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    text-align: center;
+    gap: 10px 20px;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.parameter {
+
+    width: 30%;
+    max-width: 200px;
+    color: #0f3560;
+    gap: 5px 0;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    background-color: rgba(222, 232, 243, 0.724);
+    padding: 1rem;
+}
+
+.parameter img {
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.parameter p:last-of-type {
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+.form-container {
+    display: none;
+    
+    margin: 0 auto;
+    max-width: 550px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+
+}
+
+.form-container.active {
+    display: flex;
+}
+
+.form-container input {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(212, 223, 243, 0.605);
+    border-radius: 10px;
+}
+
+.form-container input::placeholder {
+    color: #9db4cf;
+}
+.form-container input:focus {
+    outline: 3px solid rgba(255,255,255,0.7);
+}
+.form-container .btn{
+    padding: unset;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+border-radius: 50%;
+align-self: center;
+margin-bottom: 1px;
+}
