@@ -249,7 +249,8 @@
 }
 
 .form-container input::placeholder {
-    color: #9db4cf;
+    color: #0d2848;
+    text-transform: capitalize;
 }
 .form-container input:focus {
     outline: 3px solid rgba(255,255,255,0.7);
