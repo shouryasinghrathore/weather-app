@@ -73,11 +73,14 @@ async function fetchUserWeatherInfo(coordinates) {
 
 
 }
+const notfound = document.querySelector(".notfound")
 
 function rendorWeatherInfo(weatherInfo) {
     //fistly, we have to fetch the elements 
-
-
+    if (weatherInfo?.name == undefined) {
+        userInfoContainer.classList.remove("active");
+        notfound.classList.add("active");
+    }
     const cityName = document.querySelector("[data-cityName]");
     const countryIcon = document.querySelector("[data-countryIcon]")
     const desc = document.querySelector("[data-weatherDesc]")
@@ -86,6 +89,8 @@ function rendorWeatherInfo(weatherInfo) {
     const windspeed = document.querySelector("[data-windspeed");
     const humidity = document.querySelector("[data-humidity");
     const cloudy = document.querySelector("[data-cloudy");
+
+
 
     cityName.innerText = weatherInfo?.name;
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
@@ -139,6 +144,7 @@ searchForm.addEventListener("submit", (e) => {
 
 
 async function fetchSearchWeatherInfo(city) {
+    notfound.classList.remove("active");
     loadingScreen.classList.add("active");
     userInfoContainer.classList.remove("active");
     grantAccessContainer.classList.remove("active");
@@ -154,7 +160,7 @@ async function fetchSearchWeatherInfo(city) {
         rendorWeatherInfo(data);
     }
     catch (err) {
-        // console.log(err);
+        console.log(err);
     }
 
 }
