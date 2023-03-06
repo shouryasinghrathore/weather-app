@@ -62,8 +62,8 @@
 }
 
 
-.weather-container{
-    
+.weather-container {
+
     margin-block: 4rem;
 }
 
@@ -124,7 +124,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .loading-container p {
@@ -160,17 +160,21 @@
     width: 90px;
     height: 90px;
 }
+
 .notfound {
     display: none;
     width: 100%;
     height: 90px;
     flex-direction: column;
-margin-top: 50px;
+    margin-top: 50px;
+
     align-items: center;
 }
+
 .notfound.active {
-   display: flex;
+    display: flex;
 }
+
 .name img {
     object-fit: contain;
     width: 30px;
@@ -189,7 +193,7 @@ margin-top: 50px;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-    
+
     text-align: center;
     gap: 10px 20px;
     margin-top: 2rem;
@@ -229,7 +233,7 @@ margin-top: 50px;
 
 .form-container {
     display: none;
-    
+
     margin: 0 auto;
     max-width: 550px;
     width: 90%;
@@ -257,17 +261,19 @@ margin-top: 50px;
     color: #0d2848;
     text-transform: capitalize;
 }
+
 .form-container input:focus {
-    outline: 3px solid rgba(255,255,255,0.7);
+    outline: 3px solid rgba(255, 255, 255, 0.7);
 }
-.form-container .btn{
+
+.form-container .btn {
     padding: unset;
-width: 40px;
-height: 40px;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 50%;
-align-self: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    align-self: center;
 
 }
