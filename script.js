@@ -61,7 +61,7 @@ async function fetchUserWeatherInfo(coordinates) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}&units=metric`);
         const data = await response.json();
-
+        notfound.classList.remove("active");
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
         rendorWeatherInfo(data);
@@ -91,15 +91,15 @@ function rendorWeatherInfo(weatherInfo) {
     const cloudy = document.querySelector("[data-cloudy");
 
 
-
+    console.log(weatherInfo);
     cityName.innerText = weatherInfo?.name;
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
     temp.innerText = `${weatherInfo?.main?.temp} °C`;
     windspeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
-    humidity.innerText = `${weatherInfo?.main?.humidity} %`;
-    cloudy.innerText = `${weatherInfo?.clouds?.all} %`;
+    humidity.innerText = `${weatherInfo?.main?.humidity}%`;
+    cloudy.innerText = `${weatherInfo?.clouds?.all}%`;
 
 }
 
