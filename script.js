@@ -93,6 +93,7 @@ function rendorWeatherInfo(weatherInfo) {
 
     console.log(weatherInfo);
     cityName.innerText = weatherInfo?.name;
+
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
@@ -101,6 +102,9 @@ function rendorWeatherInfo(weatherInfo) {
     humidity.innerText = `${weatherInfo?.main?.humidity}%`;
     cloudy.innerText = `${weatherInfo?.clouds?.all}%`;
 
+    let msg = new SpeechSynthesisUtterance();
+    msg.text = ` its ${weatherInfo?.main?.temp} in  ${ weatherInfo?.name}`;
+    window.speechSynthesis.speak(msg);
 }
 
 function getlocation() {
